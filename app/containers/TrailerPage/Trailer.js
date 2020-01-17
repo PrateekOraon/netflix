@@ -14,7 +14,7 @@ export default class Trailer extends React.Component {
 
   componentDidMount() {
     const response = fetch(
-      `http://www.omdbapi.com/?i=${this.props.location.show.imdbID}&apikey=15680846`,
+      `https://www.omdbapi.com/?i=${this.props.location.show.imdbID}&apikey=15680846`,
     );
     response
       .then(response => response.json())
