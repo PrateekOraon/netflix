@@ -15,12 +15,12 @@ const Header = props => (
   <div className="header">
     <div className="nav-bar">
       <img className="logo" src={Netflix} alt="logo" />
-      <a className="router-link" href="/">
+      <Link className="router-link" to="/">
         Home
-      </a>
-      <a className="router-link" href="/favorites">
+      </Link>
+      <Link className="router-link" to="/favorites">
         My List
-      </a>
+      </Link>
       <input
         className="search-box"
         type="text"

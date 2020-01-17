@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import Iframe from 'react-iframe';
 import { loadState } from '../../localStorage';
 
-const persistedState = loadState();
-
 export default class FeaturePage extends React.Component {
   state = {
     mount: 0,
@@ -13,6 +11,7 @@ export default class FeaturePage extends React.Component {
   };
 
   componentDidMount() {
+    const persistedState = loadState();
     if (persistedState && persistedState.favorites) {
       this.setState({
         added: Object.keys(persistedState.favorites).includes(
@@ -77,12 +76,14 @@ export default class FeaturePage extends React.Component {
         >
           <div>{show.title}</div>
         </Link>
-        {this.state.added ? (
+        {window.location.pathname.startsWith('/favorites') ? null : this.state
+            .added ? (
           <img
             className="remove_from_list"
             onClick={() => {
               this.props.removeFromFav(show);
               this.setState({ added: false });
+              window.location.reload();
             }}
             src={require('../../images/minus.png')}
             alt="Remove from your list"
@@ -97,6 +98,7 @@ export default class FeaturePage extends React.Component {
             onClick={() => {
               this.props.addToFav(show);
               this.setState({ added: true });
+              window.location.reload();
             }}
           />
         )}

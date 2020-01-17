@@ -2,7 +2,7 @@
   "name": "netflix",
   "version": "1.0.0",
   "description": "A minimal react-redux boilerplate with all the best practices",
-  "homepage": "http://PrateekOraon.github.io/netflix",
+  "homepage": "http://PrateekOraon.github.io/netflix/",
   "license": "MIT",
   "author": "Prateek Oraon",
   "scripts": {

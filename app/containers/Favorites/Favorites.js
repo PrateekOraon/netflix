@@ -11,7 +11,6 @@ export default class Favorites extends React.PureComponent {
 
     return (
       <>
-        <div>Refresh</div>
         <div className="home-page">
           {persistedState &&
             persistedState.favorites &&
@@ -21,7 +20,6 @@ export default class Favorites extends React.PureComponent {
                 data={persistedState.favorites[item]}
                 removeFromFav={item => {
                   removeFromFav(item);
-                  window.location.reload();
                 }}
               />
             ))}
