@@ -15,10 +15,10 @@ const Header = props => (
   <div className="header">
     <div className="nav-bar">
       <img className="logo" src={Netflix} alt="logo" />
-      <a className="router-link" href="/netflix">
+      <a className="router-link" href="/">
         Home
       </a>
-      <a className="router-link" href="/netflix/favorites">
+      <a className="router-link" href="/favorites">
         My List
       </a>
       <input

@@ -1,6 +1,7 @@
 import { put, select, takeLatest } from 'redux-saga/effects';
 import { FILTER_RESULTS } from '../../components/Header/constants';
 import { noShowsFound } from './actions';
+import { makeSelectShows } from './selectors';
 import { loadShows } from '../../components/Header/actions';
 
 export function* getRepos(action) {

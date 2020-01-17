@@ -15,14 +15,12 @@ const App = () => (
       <meta name="description" content="react js app" />
     </Helmet>
     <Header />
-    <BrowserRouter basename="/netflix">
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/features/:trailerId" component={TrailerPage} />
-        <Route exact path="/favorites" component={Favorites} />
-        <Route path="" component={NotFoundPage} />
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/features/:trailerId" component={TrailerPage} />
+      <Route exact path="/favorites" component={Favorites} />
+      <Route path="" component={NotFoundPage} />
+    </Switch>
   </div>
 );
 
