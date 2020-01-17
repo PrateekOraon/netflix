@@ -1,0 +1,15 @@
+.home-page {
+  display: grid;
+  background: transparent;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, [col] minmax(350px, 1fr));
+  padding: 20px 20px;
+  grid-gap: 2em;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 390px) {
+  .home-page {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

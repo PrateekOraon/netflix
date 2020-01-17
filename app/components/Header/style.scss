@@ -1,0 +1,63 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  img {
+    width: 6em;
+  }
+
+  .nav-bar {
+    background-color: rgba(#000000, 0.9);
+    padding: 0 5vw;
+
+    display: flex;
+
+    & input {
+      width: 5px;
+      margin-left: auto;
+      box-sizing: border-box;
+      align-self: center;
+      border-radius: 4px;
+      border: none;
+      font-size: 16px;
+      background-color: transparent;
+      background-image: url('./images/search-icon.png');
+      background-size: 20px 20px;
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+
+    & input:focus {
+      width: 30%;
+      height: 90%;
+      border: 1px solid #ffffff;
+      outline: none;
+      color: #ffffff;
+    }
+  }
+
+  .router-link {
+    align-items: center;
+    display: inline-flex;
+    margin-left: 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-touch-callout: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    color: rgba($color: #ffffff, $alpha: 0.5);
+
+    &:active,
+    &:visited {
+      color: rgba($color: #ffffff, $alpha: 1);
+      font-weight: bold;
+    }
+  }
+}

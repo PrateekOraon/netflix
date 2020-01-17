@@ -1,0 +1,86 @@
+.feature-page {
+  position: relative;
+  border-radius: 3px;
+  background-color: rgba(#000000, 0.7);
+  display: grid;
+  overflow: hidden;
+  color: white;
+  grid-template-columns: repeat(2, [col] 1fr);
+  grid-template-rows: repeat(2, min-content);
+  grid-auto-flow: column dense;
+  transition: transform 0.1s ease-in-out;
+  grid-gap: 0.5em;
+  padding-right: 0.5em;
+  width: 100%;
+
+  .poster {
+    grid-row: 1/-1;
+    height: 313px;
+
+    img {
+      width: 100%;
+      min-height: 313px;
+    }
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+}
+
+.feature-page:hover {
+  transform: scale(1.05, 1.05);
+  z-index: 1;
+  .link {
+    opacity: 1;
+    background-color: rgba(black, 0);
+  }
+  .add_to_list,
+  .remove_from_list {
+    opacity: 1;
+  }
+}
+
+.play {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100%;
+  height: 130%;
+  transition: all 0.1s ease-out;
+  transition-delay: 3s;
+}
+.link {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  z-index: 11;
+  background-color: rgba(black, 1);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0 0 10px 10px;
+  transition: all 0.2s ease-out;
+  transition-delay: 1s;
+}
+
+.add_to_list,
+.remove_from_list {
+  opacity: 0;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 13;
+  transform: scale(0.7);
+  transition: opacity 0.2s ease-out;
+  transition-delay: 1s;
+  cursor: pointer;
+}
+
+.add_to_list:hover,
+.remove_from_list:hover {
+  transform: scale(0.75);
+}

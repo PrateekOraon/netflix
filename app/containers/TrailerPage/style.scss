@@ -1,0 +1,23 @@
+.trailer {
+  background-color: transparent;
+  width: 100%;
+  color: white;
+  margin-top: 50px;
+  padding: 10px;
+
+  .details {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    img {
+      width: 100px;
+      height: 200px;
+      margin-right: 20px;
+    }
+  }
+
+  .iframe {
+    height: calc(100vh - 50px);
+  }
+}
